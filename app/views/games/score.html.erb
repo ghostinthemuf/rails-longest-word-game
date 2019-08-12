@@ -1,0 +1,12 @@
+<h1>Result</h1>
+<% if !@grid_valid %>
+  <p>Sorry but <%= @word %> can't be built out of <%= @grid %></p>
+  <p>Score : 0</p>
+<% elsif !@dico_valid %>
+  <p>Sorry but <%= @word %> is not an english word</p>
+  <p>Score : 0</p>
+<% else %>
+  <p>Well Done!</p>
+  <p>Score : <%= @score %></p>
+<% end %>
+<p><%= link_to "Play again", 'new' %></p>

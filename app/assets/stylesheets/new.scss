@@ -1,0 +1,29 @@
+// Place all the styles related to the new controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul#letters {
+  padding-left: 0;
+}
+
+#letters > li {
+  display: inline-block;
+  color: white;
+  background-color: #4d88ff;
+  font-size: 24px;
+  margin: 10px;
+}
+
+.contenant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+}
