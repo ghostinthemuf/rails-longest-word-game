@@ -11,10 +11,14 @@ class GamesController < ApplicationController
     @word = params['word']
     @grid_valid = grid?(params['word'], params['grid'])
     @dico_valid = dico?(params['word'])
-    @score = params['word'].size
+    session[:score] += params['word'].size
   end
 
   private
+
+  def create
+    session[:score] = 0
+  end
 
   def dico?(word)
     dico_query_serialized = open("https://wagon-dictionary.herokuapp.com/#{word}").read

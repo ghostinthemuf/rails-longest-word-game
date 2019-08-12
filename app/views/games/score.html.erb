@@ -7,6 +7,6 @@
   <p>Score : 0</p>
 <% else %>
   <p>Well Done!</p>
-  <p>Score : <%= @score %></p>
+  <p>Score cumulé : <%= session[:score] %></p>
 <% end %>
 <p><%= link_to "Play again", 'new' %></p>
